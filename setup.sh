@@ -14,7 +14,7 @@ mkdir Pictures/Wallpapers
 part=$((part+1))
 
 echo -e "\e[1m\e[31m[\e[97m$stage.$part\e[31m] \e[32m Copying dot files  \e[0m"
-cp -r $obas/.* .
+cp -r $obas/dotfiles/.* .
 part=$((part+1))
 
 echo -e "\e[1m\e[31m[\e[97m$stage.$part\e[31m] \e[32m Copying wallpaper\e[0m"
@@ -25,7 +25,7 @@ part=0 && stage=$((stage+1))
 echo -e "\e[1m\e[31m[\e[97m$stage.$part\e[31m] \e[32m Downloading and installing firefox  \e[0m"
 cd .programs
 wget --quiet "https://download-installer.cdn.mozilla.net/pub/firefox/nightly/latest-mozilla-central/firefox-76.0a1.en-US.linux-x86_64.tar.bz2" -O firefox.tar.bz2
-tar -xvf firefox.tar.bz2
+tar -xf firefox.tar.bz2
 rm firefox.tar.bz2
 cd $HOME
 part=$((part+1))
@@ -102,9 +102,9 @@ echo -e "\e[1m\e[31m[\e[97m$stage.$part\e[31m] \e[32m Installing leafpad (gui te
 sudo apt-get install leafpad -yy >/dev/null
 part=$((part+1))
 
-echo -e "\e[1m\e[31m[\e[97m$stage.$part\e[31m] \e[32m Installing wicd (wifi manager)  \e[0m"
-sudo apt-get install wicd -yy >/dev/null
-part=$((part+1))
+#echo -e "\e[1m\e[31m[\e[97m$stage.$part\e[31m] \e[32m Installing wicd (wifi manager)  \e[0m"
+#sudo apt-get install wicd -yy >/dev/null
+#part=$((part+1))
 
 echo -e "\e[1m\e[31m[\e[97m$stage.$part\e[31m] \e[32m Installing lxappearance (customizer)  \e[0m"
 sudo apt-get install lxappearance -yy >/dev/null
