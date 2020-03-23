@@ -132,7 +132,7 @@ part=$((part+1))
 
 echo -e "\e[1m\e[31m[\e[97m$stage.$part\e[31m] \e[32m Installing drivers \e[0m"
 sudo apt-get install ubuntu-drivers-common -yy >/dev/null
-sudo ubuntu-drivers autoinstall -yy >/dev/null
+sudo ubuntu-drivers autoinstall >/dev/null
 part=$((part+1))
 
 echo -e "\e[1m\e[31m[\e[97m$stage.$part\e[31m] \e[32m Installing software-properties-common \e[0m"
@@ -157,6 +157,7 @@ part=$((part+1))
 
 echo -e "\e[1m\e[31m[\e[97m$stage.$part\e[31m] \e[32m Installing zsh LS file extension colors  \e[0m"
 git clone https://github.com/trapd00r/LS_COLORS >/dev/null
+mkdir -p $HOME/.local/green
 cd LS_COLORS
 ./install.sh
 part=0 && stage=$((stage+1))
