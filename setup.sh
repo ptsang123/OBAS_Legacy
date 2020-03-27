@@ -10,7 +10,7 @@ cd $HOME
 mkdir .programs
 mkdir .local/share
 mkdir -p .vim/plugged
-mkdir Downloads Desktop Videos Music Projects
+mkdir Downloads Desktop Videos Music
 part=$((part+1))
 
 echo -e "\e[1m\e[31m[\e[97m$stage.$part\e[31m] \e[32m Copying dot files  \e[0m"
@@ -168,6 +168,7 @@ read choice
 case $choice in
 	"y")
 		cd $HOME
+		mkdir Projects
 
 		echo -e "\e[1m\e[31m[\e[97m$stage.$part\e[31m] \e[32m Installing moc (music player on console)  \e[0m"
 		sudo apt-get install moc -yy >/dev/null
