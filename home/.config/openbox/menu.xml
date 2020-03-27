@@ -6,6 +6,11 @@
 				<execute>thunderbird</execute>
 			</action>
 		</item>
+		<item label="Calculator">
+			<action name="Execute">
+				<execute>kcalc</execute>
+			</action>
+		</item>
 		<item label="Terminal emulator">
 			<action name="Execute">
 				<execute>urxvt</execute>
