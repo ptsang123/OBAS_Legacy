@@ -14,12 +14,8 @@ mkdir Pictures/Wallpapers
 part=$((part+1))
 
 echo -e "\e[1m\e[31m[\e[97m$stage.$part\e[31m] \e[32m Copying dot files  \e[0m"
-cp -r $obas/dotfiles/.* .
+cp -a $obas/home/. .
 part=$((part+1))
-
-echo -e "\e[1m\e[31m[\e[97m$stage.$part\e[31m] \e[32m Copying wallpaper\e[0m"
-cp $obas/green_wallpaper.jpg $HOME/Pictures/Wallpapers
-part=0 && stage=$((stage+1))
 
 #Stage 1
 echo -e "\e[1m\e[31m[\e[97m$stage.$part\e[31m] \e[32m Downloading and installing firefox  \e[0m"
@@ -102,10 +98,6 @@ echo -e "\e[1m\e[31m[\e[97m$stage.$part\e[31m] \e[32m Installing leafpad (gui te
 sudo apt-get install leafpad -yy >/dev/null
 part=$((part+1))
 
-#echo -e "\e[1m\e[31m[\e[97m$stage.$part\e[31m] \e[32m Installing wicd (wifi manager)  \e[0m"
-#sudo apt-get install wicd -yy >/dev/null
-#part=$((part+1))
-
 echo -e "\e[1m\e[31m[\e[97m$stage.$part\e[31m] \e[32m Installing lxappearance (customizer)  \e[0m"
 sudo apt-get install lxappearance -yy >/dev/null
 part=$((part+1))
@@ -120,6 +112,10 @@ part=$((part+1))
 
 echo -e "\e[1m\e[31m[\e[97m$stage.$part\e[31m] \e[32m Installing mpv (video viewer)  \e[0m"
 sudo apt-get install mpv -yy >/dev/null
+part=$((part+1))
+
+echo -e "\e[1m\e[31m[\e[97m$stage.$part\e[31m] \e[32m Installing flameshot (screenshot manager)\e[0m"
+sudo apt-get install flameshot -yy >/dev/null
 part=$((part+1))
 
 echo -e "\e[1m\e[31m[\e[97m$stage.$part\e[31m] \e[32m Installing noto-color-emoji (emoji font)  \e[0m"
@@ -144,6 +140,7 @@ sudo apt-get upgrade -yy >/dev/null
 part=$((part+1))
 
 echo -e "\e[1m\e[31m[\e[97m$stage.$part\e[31m] \e[32m Installing vim plugin manager\e[0m"
+sudo apt-get install curl -yy >/dev/null
 curl -sfLo ~/.vim/autoload/plug.vim --create-dirs \
     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim >/dev/null
 part=$((part+1))

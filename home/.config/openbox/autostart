@@ -13,5 +13,8 @@ compton &
 # start sxhkd
 sxhkd $HOME/.config/sxhkd/sxhkdrc &
 
+# start flameshot
+flameshot &
+
 # Set wallpaper
 feh --bg-center $HOME/Pictures/Wallpapers/green_wallpaper.jpg

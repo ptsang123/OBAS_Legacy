@@ -22,5 +22,14 @@ XF86AudioMute
 XF86AudioRaiseVolume 
 	amixer -q -D pulse sset Master 5%+
 
+#Lower volume by 5
 XF86AudioLowerVolume 
 	amixer -q -D pulse sset Master 5%-
+
+#Screenshot
+Print
+	flameshot gui
+
+#Email client
+XF86Mail
+	thunderbird
