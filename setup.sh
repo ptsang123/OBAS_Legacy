@@ -30,6 +30,10 @@ echo -e "\e[1m\e[31m[\e[97m$stage.$part\e[31m] \e[32m Updating package lists tha
 sudo apt-get update -yy >/dev/null
 part=$((part+1))
 
+echo -e "\e[1m\e[31m[\e[97m$stage.$part\e[31m] \e[32m Installing Korganizer (calendar)\e[0m"
+sudo apt-get update -yy >/dev/null
+part=$((part+1))
+
 echo -e "\e[1m\e[32m[\e[97m$stage.$part\e[31m] \e[32m Installing kcalc (calculator)  \e[0m"
 sudo apt-get install kcalc -yy >/dev/null
 part=$((part+1))
