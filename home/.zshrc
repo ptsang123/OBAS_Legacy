@@ -1,11 +1,13 @@
 #show colors
 autoload -U colors && colors
-PS1="%B%{$fg[red]%}[%{$fg[green]%}%n%{$fg[red]%}@%{$fg[green]%}%M %{$fg[green]%}%~%{$fg[red]%}]%{$reset_color%}$%b "
+PS1="%B%{$fg[green]%}[%{$fg[blue]%}%n%{$fg[green]%}@%{$fg[blue]%}%M %{$fg[green]%}%~%{$fg[green]%}]%{$reset_color%}$%b "
 . $HOME/.local/share/lscolors.sh
 
+zstyle ':completion:*' menu select
+
 #Keyboard controls
-bindkey "^[Oc" forward-word
-bindkey "^[Od" backward-word
+bindkey "^[[1;5C" forward-word
+bindkey "^[[1;5D" backward-word
 
 #add directories to path
 export PATH=$HOME/.scripts:$PATH

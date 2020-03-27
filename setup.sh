@@ -8,9 +8,9 @@ obas=$HOME/OBAS
 echo -e "\e[1m\e[31m[\e[97m$stage.$part\e[31m] \e[32m Creating directories  \e[0m"
 cd $HOME
 mkdir .programs
+mkdir .local/share
 mkdir -p .vim/plugged
-mkdir Downloads Documents Desktop Videos Pictures Music Projects
-mkdir Pictures/Wallpapers
+mkdir Downloads Desktop Videos Music Projects
 part=$((part+1))
 
 echo -e "\e[1m\e[31m[\e[97m$stage.$part\e[31m] \e[32m Copying dot files  \e[0m"
@@ -163,7 +163,7 @@ cd $HOME
 
 sudo chmod +x $HOME/.scripts/*
 
-echo -e "Do you need the extra files? [y/n]"
+echo -e "Do you need the extra files and softwares? [y/n]"
 read choice
 case $choice in
 	"y")

@@ -33,3 +33,7 @@ Print
 #Email client
 XF86Mail
 	thunderbird
+
+#Help menu
+alt + F12
+	zathura $HOME/Documents/help.pdf
