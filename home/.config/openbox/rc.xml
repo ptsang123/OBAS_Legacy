@@ -312,16 +312,7 @@
         <direction>down</direction>
       </action>
     </keybind>
-    <!-- Keybindings for running applications -->
-    <keybind key="W-e">
-      <action name="Execute">
-        <startupnotify>
-          <enabled>true</enabled>
-          <name>Konqueror</name>
-        </startupnotify>
-        <command>kfmclient openProfile filemanagement</command>
-      </action>
-    </keybind>
+
     <!-- Launch scrot when Print is pressed -->
     <keybind key="Print">
       <action name="Execute">
@@ -329,15 +320,33 @@
       </action>
     </keybind>
     <!-- Keyboard: Window Size Manipulation -->
-    	<keybind key="W-Up">
+    	<keybind key="W-C-Up">
 		<action name="Maximize"/>
-	</keybind>	<keybind key="W-Down">
+	</keybind>	
+	<keybind key="W-C-Down">
 		<action name="Iconify"/>
 	</keybind>
-	<keybind key="W-Left">
+	<keybind key="W-C-Left">
 		<action name="Unmaximize"/>
 	</keybind>
-
+	  <keybind key="W-Left">
+	    <action name="Unmaximize" />
+	    <action name="MoveResizeTo">
+	      <x>0</x>
+	      <y>0</y>
+	      <width>52%</width>
+	      <height>101%</height>
+	    </action>
+	  </keybind>
+	  <keybind key="W-Right">
+	    <action name="Unmaximize" />
+	    <action name="MoveResizeTo">
+	      <x>-0</x>
+	      <y>0</y>
+	      <width>50%</width>
+	      <height>101%</height>
+	    </action>
+	  </keybind>
   </keyboard>
   <mouse>
     <dragThreshold>1</dragThreshold>

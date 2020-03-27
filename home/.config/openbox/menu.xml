@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <openbox_menu xmlns="http://openbox.org/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://openbox.org/                 file:///usr/share/openbox/menu.xsd">
 	<menu id="root-menu" label="Openbox 3">
+		<item label="Email">
+			<action name="Execute">
+				<execute>thunderbird</execute>
+			</action>
+		</item>
 		<item label="Terminal emulator">
 			<action name="Execute">
 				<execute>urxvt</execute>
@@ -16,17 +21,23 @@
 		<separator/>
 		<menu execute="/usr/bin/obamenu" id="applications-menu" label="Applications"/>
 		<separator/>
-		<item label="ObConf">
-			<action name="Execute">
-				<execute>obconf</execute>
-			</action>
-		</item>
-		<item label="Reconfigure">
-			<action name="Reconfigure"/>
-		</item>
-		<item label="Restart">
-			<action name="Restart"/>
-		</item>
+		<menu id="root-menu-7492" label="Power options">
+			<item label="shutdown">
+				<action name="Execute">
+					<execute>shutdown -P 0</execute>
+				</action>
+			</item>
+			<item label="suspend">
+				<action name="Execute">
+					<execute>systemctl suspend</execute>
+				</action>
+			</item>
+			<item label="restart">
+				<action name="Execute">
+					<execute>reboot</execute>
+				</action>
+			</item>
+		</menu>
 		<separator/>
 		<item label="Exit">
 			<action name="Exit"/>
