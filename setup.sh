@@ -177,6 +177,12 @@ case $choice in
 	"y")
 		cd $HOME
 		mkdir Projects
+		
+		echo -e "\e[1m\e[31m[\e[97m$stage.$part\e[31m] \e[32m Installing Hakuneko (Manga downloader) \e[0m"
+		wget --quiet "https://github-production-release-asset-2e65be.s3.amazonaws.com/95580598/5c51e900-3a2e-11ea-8242-6132a49adba3?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAIWNJYAX4CSVEH53A%2F20200410%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20200410T235639Z&X-Amz-Expires=300&X-Amz-Signature=afaccb54e1b1ef2a2ac38cdb147506948c3a2ed6a10febe4bb8b7710a9292949&X-Amz-SignedHeaders=host&actor_id=24739635&repo_id=95580598&response-content-disposition=attachment%3B%20filename%3Dhakuneko-desktop_6.1.7_linux_amd64.deb&response-content-type=application%2Foctet-stream" -O hakuneko.deb >/dev/null
+		sudo gdebi hakuneko.deb --n >/dev/null
+		rm hakuneko.deb
+		part=$((part+1))
 
 		echo -e "\e[1m\e[31m[\e[97m$stage.$part\e[31m] \e[32m Installing moc (music player on console)  \e[0m"
 		sudo apt-get install moc -yy >/dev/null
