@@ -8,7 +8,7 @@ obas=$HOME/OBAS
 echo -e "\e[1m\e[31m[\e[97m$stage.$part\e[31m] \e[32m Creating directories  \e[0m"
 cd $HOME
 mkdir .programs
-mkdir .local/share
+mkdir -p .local/share
 mkdir -p .vim/plugged
 mkdir Downloads Desktop Videos Music
 part=$((part+1))
