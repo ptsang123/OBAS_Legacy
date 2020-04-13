@@ -15,7 +15,7 @@ part=$((part+1))
 
 echo -e "\e[1m\e[31m[\e[97m$stage.$part\e[31m] \e[32m Copying dot files  \e[0m"
 cp -a $obas/home/. .
-part=$((part+1))
+part=0 && stage=$((stage+1))
 
 #Stage 1
 echo -e "\e[1m\e[31m[\e[97m$stage.$part\e[31m] \e[32m Downloading and installing firefox  \e[0m"
