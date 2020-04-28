@@ -179,30 +179,19 @@
   <keyboard>
     <chainQuitKey>C-g</chainQuitKey>
     <!-- Keybindings for desktop switching -->
-    <keybind key="C-A-Left">
+    <keybind key="C-W-Left">
       <action name="GoToDesktop">
         <to>left</to>
         <wrap>no</wrap>
       </action>
     </keybind>
-    <keybind key="C-A-Right">
+    <keybind key="C-W-Right">
       <action name="GoToDesktop">
         <to>right</to>
         <wrap>no</wrap>
       </action>
     </keybind>
-    <keybind key="C-A-Up">
-      <action name="GoToDesktop">
-        <to>up</to>
-        <wrap>no</wrap>
-      </action>
-    </keybind>
-    <keybind key="C-A-Down">
-      <action name="GoToDesktop">
-        <to>down</to>
-        <wrap>no</wrap>
-      </action>
-    </keybind>
+	  
     <keybind key="W-A-Left">
       <action name="SendToDesktop">
         <to>left</to>
@@ -215,18 +204,7 @@
         <wrap>no</wrap>
       </action>
     </keybind>
-    <keybind key="S-A-Up">
-      <action name="SendToDesktop">
-        <to>up</to>
-        <wrap>no</wrap>
-      </action>
-    </keybind>
-    <keybind key="S-A-Down">
-      <action name="SendToDesktop">
-        <to>down</to>
-        <wrap>no</wrap>
-      </action>
-    </keybind>
+	  
     <keybind key="W-F1">
       <action name="GoToDesktop">
         <to>1</to>
@@ -320,33 +298,66 @@
       </action>
     </keybind>
     <!-- Keyboard: Window Size Manipulation -->
-    	<keybind key="W-C-Up">
-		<action name="Maximize"/>
-	</keybind>	
-	<keybind key="W-C-Down">
-		<action name="Iconify"/>
+	<keybind key="W-Up">
+      		<action name="Maximize"/>
+    	</keybind>
+    	<keybind key="W-Down">
+      		<action name="Iconify"/>
+    	</keybind>
+	<keybind key="W-A-x">
+	  <action name="Unmaximize"/>
+	  <action name="MoveResizeTo">
+	    <x>-1%</x>
+	    <y>2%</y>
+	    <width>48%</width>
+	    <height>96%</height>
+	  </action>
 	</keybind>
-	<keybind key="W-C-Left">
-		<action name="Unmaximize"/>
+	<keybind key="W-A-z">
+	  <action name="Unmaximize"/>
+	  <action name="MoveResizeTo">
+	    <x>1%</x>
+	    <y>2%</y>
+	    <width>49%</width>
+	    <height>96%</height>
+	  </action>
 	</keybind>
-	  <keybind key="W-Left">
-	    <action name="Unmaximize" />
-	    <action name="MoveResizeTo">
-	      <x>0</x>
-	      <y>0</y>
-	      <width>52%</width>
-	      <height>101%</height>
-	    </action>
-	  </keybind>
-	  <keybind key="W-Right">
-	    <action name="Unmaximize" />
-	    <action name="MoveResizeTo">
-	      <x>-0</x>
-	      <y>0</y>
-	      <width>50%</width>
-	      <height>101%</height>
-	    </action>
-	  </keybind>
+
+	<keybind key="W-z">
+	  <action name="Unmaximize"/>
+	  <action name="MoveResizeTo">
+	    <x>1%</x>
+	    <y>2%</y>
+	    <height>47%</height>
+	    <width>49%</width>
+	  </action>
+	</keybind>
+	<keybind key="W-x">
+	  <action name="Unmaximize"/>
+	  <action name="MoveResizeTo">
+	    <x>-1%</x>
+	    <y>2%</y>
+	    <height>47%</height>
+	    <width>48%</width>
+	  </action>
+	</keybind>
+	<keybind key="W-c">
+	  <action name="Unmaximize"/>
+	  <action name="MoveResizeTo">
+	    <x>1%</x>
+	    <y>-2%</y>
+	    <height>47%</height>
+	    <width>49%</width>
+	  </action>
+	</keybind>
+	<keybind key="W-v">
+	  <action name="Unmaximize"/>
+	  <action name="MoveResizeTo">
+	    <x>-1%</x>
+	    <y>-2%</y>
+	    <height>47%</height>
+	    <width>48%</width>
+	  </action>
   </keyboard>
   <mouse>
     <dragThreshold>1</dragThreshold>
