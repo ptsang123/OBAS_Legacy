@@ -120,13 +120,14 @@
 
        use obconf if you want to change these without having to log out
        and back in -->
-    <number>4</number>
+    <number>5</number>
     <firstdesk>1</firstdesk>
     <names>
       <name>1</name>
       <name>2</name>
       <name>3</name>
       <name>4</name>
+      <name>5</name>
     </names>
     <popupTime>875</popupTime>
     <!-- The number of milliseconds to show the popup for when switching
@@ -191,7 +192,18 @@
         <wrap>no</wrap>
       </action>
     </keybind>
-	  
+    <keybind key="C-W-Up">
+      <action name="GoToDesktop">
+        <to>up</to>
+        <wrap>no</wrap>
+      </action>
+    </keybind>
+    <keybind key="C-W-Down">
+      <action name="GoToDesktop">
+        <to>down</to>
+        <wrap>no</wrap>
+      </action>
+    </keybind>
     <keybind key="W-A-Left">
       <action name="SendToDesktop">
         <to>left</to>
@@ -204,7 +216,18 @@
         <wrap>no</wrap>
       </action>
     </keybind>
-	  
+    <keybind key="S-A-Up">
+      <action name="SendToDesktop">
+        <to>up</to>
+        <wrap>no</wrap>
+      </action>
+    </keybind>
+    <keybind key="S-A-Down">
+      <action name="SendToDesktop">
+        <to>down</to>
+        <wrap>no</wrap>
+      </action>
+    </keybind>
     <keybind key="W-F1">
       <action name="GoToDesktop">
         <to>1</to>
@@ -278,32 +301,14 @@
         </finalactions>
       </action>
     </keybind>
-    <!-- Keybindings for window switching with the arrow keys -->
-
-    <keybind key="W-S-Up">
-      <action name="DirectionalCycleWindows">
-        <direction>up</direction>
-      </action>
-    </keybind>
-    <keybind key="W-S-Down">
-      <action name="DirectionalCycleWindows">
-        <direction>down</direction>
-      </action>
-    </keybind>
-
-    <!-- Launch scrot when Print is pressed -->
-    <keybind key="Print">
-      <action name="Execute">
-        <command>scrot</command>
-      </action>
-    </keybind>
     <!-- Keyboard: Window Size Manipulation -->
-	<keybind key="W-Up">
-      		<action name="Maximize"/>
-    	</keybind>
-    	<keybind key="W-Down">
-      		<action name="Iconify"/>
-    	</keybind>
+    <keybind key="W-Up">
+      <action name="Maximize"/>
+    </keybind>
+    <keybind key="W-Down">
+      <action name="Iconify"/>
+    </keybind>
+    
 	<keybind key="W-A-x">
 	  <action name="Unmaximize"/>
 	  <action name="MoveResizeTo">
@@ -358,6 +363,8 @@
 	    <height>47%</height>
 	    <width>48%</width>
 	  </action>
+	</keybind>
+
   </keyboard>
   <mouse>
     <dragThreshold>1</dragThreshold>
@@ -618,7 +625,6 @@
       </mousebind>
     </context>
     <context name="Desktop">
-      
       <mousebind button="A-Up" action="Click">
         <action name="GoToDesktop">
           <to>previous</to>
