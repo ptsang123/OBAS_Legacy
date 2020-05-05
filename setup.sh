@@ -20,7 +20,7 @@ part=0 && stage=$((stage+1))
 #Stage 1
 echo -e "\e[1m\e[31m[\e[97m$stage.$part\e[31m] \e[32m Downloading and installing firefox  \e[0m"
 cd .programs
-wget --quiet "https://download-installer.cdn.mozilla.net/pub/firefox/nightly/latest-mozilla-central/firefox-76.0a1.en-US.linux-x86_64.tar.bz2" -O firefox.tar.bz2
+wget --quiet "https://download-installer.cdn.mozilla.net/pub/firefox/nightly/latest-mozilla-central/firefox-78.0a1.en-US.linux-x86_64.tar.bz2" -O firefox.tar.bz2
 tar -xf firefox.tar.bz2
 rm firefox.tar.bz2
 cd $HOME
