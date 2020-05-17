@@ -302,6 +302,18 @@
       </action>
     </keybind>
     <!-- Keyboard: Window Size Manipulation -->
+	<keybind key="W-S-Left">
+      		<action name="MoveResizeTo">
+        		<monitor>1</monitor>
+      		</action>
+    	</keybind>
+    
+	 <keybind key="W-S-Right">
+      		<action name="MoveResizeTo">
+        		<monitor>2</monitor>
+      		</action>
+    	</keybind>
+
     <keybind key="W-Up">
       <action name="Maximize"/>
     </keybind>
