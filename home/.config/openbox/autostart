@@ -15,3 +15,6 @@ sxhkd $HOME/.config/sxhkd/sxhkdrc &
 
 # Set wallpaper
 feh --bg-center $HOME/Pictures/Wallpapers/green_wallpaper.jpg
+
+# start flameshot
+flameshot &
